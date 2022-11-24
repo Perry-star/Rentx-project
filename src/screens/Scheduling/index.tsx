@@ -1,0 +1,89 @@
+import React from "react";
+import {useTheme} from 'styled-components';
+import { StatusBar } from 'react-native';
+
+import { BackButton } from "../../components/BackButton";
+import { Button } from "../../components/Button";
+import { Calendar } from "../../components/Calendar";
+
+import ArrowSvg from '../../assets/assets/arrow.svg';
+
+
+import { 
+    Container,
+    Header,
+    Title,
+    RentalPeriod,
+    DateInfo,
+    DateTitle,
+    DateValue,
+    DateView,
+    Content,
+    Footer,
+
+
+} from "./styles"
+
+
+
+export function Scheduling() {
+     const theme = useTheme();
+     
+    return(
+        <Container>
+            <Header>
+                <StatusBar
+                    barStyle="light-content"
+                    backgroundColor="transparent"
+                    translucent
+                />
+                <BackButton 
+                    onPress={() => {}}
+                    color={theme.colors.shape}
+                />
+
+                <Title>
+                    Escolha uma {'\n'}
+                    data de inicio e {'\n'}
+                    fim do aluguel
+                </Title>
+         
+
+                <RentalPeriod>
+                   
+                        <DateInfo>
+                            <DateView selected={false}>
+                                <DateTitle>DE</DateTitle>
+                                <DateValue>
+                                    18/06/2022
+                                </DateValue>
+                            </DateView>
+                        </DateInfo>
+
+                        <ArrowSvg/>
+
+                        <DateInfo>
+                            <DateView selected={false}>
+                                <DateTitle>DE</DateTitle>
+                                <DateValue>
+                                    18/06/2022
+                                </DateValue>
+                            </DateView>
+                        </DateInfo>
+                    
+                </RentalPeriod>
+            </Header>
+
+            <Content>
+                <Calendar/>
+                
+            </Content>
+
+            <Footer>
+                <Button title="Confirmar"/>
+
+            </Footer>
+
+        </Container>
+    )
+}
