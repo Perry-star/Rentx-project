@@ -19,7 +19,7 @@ import {
 
 } from '@expo-google-fonts/archivo';
 
-import { Scheduling } from './src/screens/Scheduling'
+import { SchedulingComplete } from './src/screens/SchedulingComplete'
 
 
 import theme from "./src/styles/theme";
@@ -42,7 +42,7 @@ export default function App () {
     
     <ThemeProvider theme={theme}>
       
-         <Scheduling />
+         <SchedulingComplete/>
     </ThemeProvider>
  
   )

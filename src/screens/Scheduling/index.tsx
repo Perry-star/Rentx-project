@@ -64,7 +64,7 @@ export function Scheduling() {
 
                         <DateInfo>
                             <DateView selected={false}>
-                                <DateTitle>DE</DateTitle>
+                                <DateTitle>ATÉ</DateTitle>
                                 <DateValue>
                                     18/06/2022
                                 </DateValue>
