@@ -12,10 +12,7 @@ export const Container = styled.View`
 export const Content = styled.View`
     flex: 1;
     justify-content: center;
-    align-items: center;
-    
-    
-    
+    align-items: center;    
 `;
 
 
@@ -45,3 +42,10 @@ export const Footer = styled.View`
 
     margin: 80px 0;
 `;
+
+export const LogoWrapper = styled.View`
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+`;
+
