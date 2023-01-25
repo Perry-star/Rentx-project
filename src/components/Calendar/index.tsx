@@ -3,27 +3,36 @@ import { Feather } from '@expo/vector-icons';
 import { useTheme } from "styled-components";
 
 
+import { ptBR } from "./localeConfig";
+
+
 import { 
     Calendar as CustomCalendar,
-    LocaleConfig
+    LocaleConfig,
+    DateCallbackHandler
 } from 'react-native-calendars';
 
-LocaleConfig.locales['pt-br'] = {
-    monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-    monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-    dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
-    dayNamesShort: ['DOM', 'SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SÁB'],
-   
-    
-}
+LocaleConfig.locales['pt-br'] = ptBR;
 LocaleConfig.defaultLocale = 'pt-br';
+
+interface markedDatesProps {
+    [date: string]: {
+        color:string;
+        textColor:string;
+        disabled?: boolean;
+        disableTouchEvent?: boolean;
+    },
+}
+
+interface CalendarProps {
+    markedDates: markedDatesProps;
+    onDayPress: DateCallbackHandler;
+}
 
 export function Calendar() {
     const theme = useTheme();
     return(
        
-
-      
         <CustomCalendar
             renderArrow={( direction) => 
                 <Feather
@@ -54,6 +63,8 @@ export function Calendar() {
             }}
             firstDay={1}
             minDate={new Date()}
+            markingType='period'
+            markedDates={}
 
        />
       

@@ -4,6 +4,7 @@ import {CarDTO} from '../../dtos/CarDTO';
 
 import { FlatList } from 'react-native';
 
+
 export const Container = styled.View`
     
     background-color: ${({ theme }) => theme.colors.background_primary};
@@ -33,12 +34,9 @@ export const TotalCars = styled.Text`
     color: ${({ theme }) => theme.colors.text};
 `;
 
-export const CarList = styled(FlatList as new () => FlatList<CarDTO>)
-.attrs({
+export const CarList = styled.FlatList.attrs({
     contentContainerStyle: {
         padding:24
-    },
+   },
     showVerticalScrollIndicator: false
-})`
-
-`;
+})``;
