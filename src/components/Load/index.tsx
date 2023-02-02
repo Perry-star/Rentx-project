@@ -10,7 +10,7 @@ export function Load() {
         <ActivityIndicator
             color={theme.colors.main}
             size='large'
-            style={{ flex:1,}}
+            style={{ flex:1}}
         />
     )
 }

@@ -55,7 +55,7 @@ export const MyCarsButton = styled(RectButton)`
 
 
     position: absolute;
-    bottom:13px;
+    bottom:150px;
     right: 22px;
 
 
