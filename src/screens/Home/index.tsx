@@ -98,7 +98,7 @@ export function Home() {
     },[]);
 
     useEffect(() => {
-        BackHandler.addEventListener('hardwareBackPress', () =>{
+        BackHandler.addEventListener('hardwareBackPress', () => {
             return true;
         })
     })
@@ -140,9 +140,6 @@ export function Home() {
 
         }
 
-            
-           
-            
                 <PanGestureHandler onGestureEvent={onGestureEvent}>
                     <Animated.View 
                         style={[
