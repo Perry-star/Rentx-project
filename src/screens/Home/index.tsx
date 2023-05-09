@@ -140,7 +140,7 @@ export function Home() {
 
         }
 
-                <PanGestureHandler onGestureEvent={onGestureEvent}>
+                <PanGestureHandler onGestureEvent={onGestureEvent}> 
                     <Animated.View 
                         style={[
                             myCarsButtonStyle,

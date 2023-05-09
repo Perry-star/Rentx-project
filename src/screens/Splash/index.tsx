@@ -3,8 +3,6 @@ import { useNavigation } from '@react-navigation/native';
 import BrandSvg from '../../assets/assets/brand.svg';
 import LogoSvg from '../../assets/assets/logo.svg';
 
-
-
 import Animated, {
     useSharedValue,
     useAnimatedStyle,
