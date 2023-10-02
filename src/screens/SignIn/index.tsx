@@ -39,7 +39,7 @@ export function SignIn() {
     const navigation = useNavigation();
     const {signIn} = useAuth();
 
-   
+    
     async function handleSignIn() {
         try{
             const schema = Yup.object().shape({
@@ -54,6 +54,7 @@ export function SignIn() {
             Alert.alert('Tudo certo!');
 
             signIn({email, password });
+            
         }catch(error){
             if (error instanceof Yup.ValidationError){
                 Alert.alert('Opa', error.message);

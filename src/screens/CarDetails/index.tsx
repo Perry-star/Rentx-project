@@ -6,10 +6,10 @@ import { getStatusBarHeight } from "react-native-iphone-x-helper";
 
 import Animated, {
     useSharedValue,
-     useAnimatedStyle, 
-     useAnimatedScrollHandler,
-     interpolate,
-     Extrapolate,
+    useAnimatedStyle, 
+    useAnimatedScrollHandler,
+    interpolate,
+    Extrapolate,
     } from "react-native-reanimated";
 
 
@@ -111,8 +111,7 @@ export function  CarDetails() {
                 </Header>
                 <CarImages>
                     <Animated.View style={sliderCarsStyleAnimation}>
-                    
-
+            
                             <ImageSlider
                                 imagesUrl={car.photos}
                             />
